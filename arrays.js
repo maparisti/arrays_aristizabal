@@ -1,10 +1,10 @@
-debugger
+/* debugger */
 
 let dolar = 1.02
 let euro = 0.98
 let bienvenida = prompt("Estás listo para convertir tu dinero? Da click en continuar para comenzar")
 let escoger = prompt("Conertir USD a EUR o EUR a USD?")
-const divisa = ['usd a eur', 'eur a usd'];
+const conversiones = ['usd a eur', 'eur a usd'];
 
 function valorEUR() {
     divisa = parseFloat(prompt("Ingresa el valor a convertir:"))
@@ -28,9 +28,9 @@ function eurUsd (divisa, dolar) {
 
 function nuevaConversion(){
     let nuevaCon = prompt("Ingresa nuevamente la conversion, por favor")
-    let resultado = divisa.includes(nuevaCon)
+    let resultado = conversiones.includes(nuevaCon)
     if (!resultado) {
-        divisa.push(nuevaCon)
+        conversiones.push(nuevaCon)
         console.log("Gracias!", nuevaCon, "ha sido añadida cómo sugerencia")
     }
 }
